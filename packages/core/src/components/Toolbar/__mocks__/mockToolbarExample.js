@@ -9,7 +9,8 @@ import {
   Icon,
   MenuItem,
   Sort,
-  Toolbar
+  SplitButton,
+  Toolbar,
 } from '../../../index';
 import { noop } from '../../../common/helpers';
 
@@ -235,6 +236,20 @@ export class MockToolbarExample extends React.Component {
           />
         </Sort>
         <div className="form-group">
+          <SplitButton
+            title="Split action 1"
+            id="split_action_1"
+          >
+            <MenuItem eventKey="1">
+              Action
+            </MenuItem>
+            <MenuItem eventKey="2">
+              Another action
+            </MenuItem>
+            <MenuItem eventKey="3" active>
+              Active Item
+            </MenuItem>
+          </SplitButton>
           <Button
             onClick={() => {
               onActionPerformed && onActionPerformed('Action: Action 1');

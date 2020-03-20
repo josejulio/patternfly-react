@@ -69,7 +69,7 @@ export interface SelectProps
   /** Callback for typeahead clear button */
   onClear?: (event: React.MouseEvent) => void;
   /** Optional callback for custom filtering */
-  onFilter?: (e: React.ChangeEvent<HTMLInputElement>) => React.ReactElement[];
+  onFilter?: (e: React.ChangeEvent<HTMLInputElement>) => React.ReactElement[] | undefined | null;
   /** Optional callback for newly created options */
   onCreateOption?: (newOptionValue: string) => void;
   /** Variant of rendered Select */
